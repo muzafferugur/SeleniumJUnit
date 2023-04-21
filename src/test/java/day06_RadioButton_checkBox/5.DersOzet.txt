@@ -1,0 +1,15 @@
+1-)Maven : build tool,proje yönetim aracıdır.
+
+2-)Maven in yola çıkış amacı proje geliştirmenin kolaylaştırılması ve birlikte çalışmadının sağlanmasıdır.
+
+3-)Selenium,browserleri otomasyon yapabilmemiz için gerekli toolları çalıştıran bir suite'dir.
+
+4-)Maven Java projelerinin geliştirilmesi için ihtiyacımız olan tüm toolları projemize eklemek,update etmek,
+versiyonları değiştirmek gibi işlemleri kolayca yapabilmemizi sağlayan build tooldur.
+
+5-)Maven bu işlemleri nasıl sağlar?
+-Mavenın kalbi pom.xml dir.
+-pom.xml e ekleyeceğimiz dependecylerle istediğimiz her kütüphaneyi projemize kolaylıkla ekleyebiliriz
+
+6-)Maven bir framework değildir. Sadece frameworku kolayca oluşturmamızı sağlayan tooldur. Biz selenium dersleri boyunca 3 framework ile çalışacağız.
+-JUnit - TestNG -Cucumber
