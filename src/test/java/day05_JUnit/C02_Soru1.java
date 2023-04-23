@@ -22,7 +22,6 @@ public class C02_Soru1 {
         8. Tarih kısmına "2023-04-21" yazdırın
         9. Pay butonuna tıklayın.
         10. "The payment was succesfully submitted." mesajının çıktığını kontrol edin.
-
          */
 
         WebDriverManager.chromedriver().setup();
