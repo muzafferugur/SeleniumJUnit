@@ -23,13 +23,14 @@ public class C04_DropDownMenu {
     WebDriver driver;
 
     @Before
-    public void setUp()  {
+    public void setUp() {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
     }
+
     @After
     public void tearDown() {
         driver.quit();
@@ -42,13 +43,13 @@ public class C04_DropDownMenu {
         dropdown dan bir options seçmek için 3adım vardır.
         1.adım : Dropdown'ı locate edelim.
          */
-        WebElement ddm= driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+        WebElement ddm = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
 
         /*
         2.adım : Bir select objesi oluşturup parametre olarak bir önceki adımda locate'ini aldığımız
         "ddm"'yi girelim
          */
-        Select select=new Select(ddm);
+        Select select = new Select(ddm);
 
         /*
         3. adım : Dropdown'da var olan option'lardan istediğimiz bir taneyi seçelim.
@@ -58,12 +59,12 @@ public class C04_DropDownMenu {
         //select.selectByIndex(5);//--> index ile seçiyor.
 
         //arama kutusuna Java yazdıralım.
-        WebElement aramaKutusu=driver.findElement(By.id("twotabsearchtextbox"));
-        aramaKutusu.sendKeys("Java"+ Keys.ENTER);
+        WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
+        aramaKutusu.sendKeys("Java" + Keys.ENTER);
 
-        WebElement sonucYazısı=driver.findElement(By.xpath("(//div[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
-        String sonucYazısıStr=sonucYazısı.getText();
-        String arananKelime="Java";
+        WebElement sonucYazısı = driver.findElement(By.xpath("(//div[@class='a-section a-spacing-small a-spacing-top-small'])[1]"));
+        String sonucYazısıStr = sonucYazısı.getText();
+        String arananKelime = "Java";
         Assert.assertTrue(sonucYazısıStr.contains(arananKelime));
 
         Thread.sleep(3000);

@@ -32,28 +32,34 @@ public class C05_DropDownOptions {
     }
 
     @After
-    public  void tearDown() {
-       driver.quit();
+    public void tearDown() {
+        driver.quit();
     }
 
     @Test
     public void dropDownOptionsTest() {
         driver.get("http://www.amazon.com");
-        WebElement ddm= driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
-        Select select=new Select(ddm);
+        WebElement ddm = driver.findElement(By.xpath("//select[@id='searchDropdownBox']"));
+        Select select = new Select(ddm);
         select.selectByVisibleText("Books");
 
         System.out.println(select.getFirstSelectedOption().getText());//son seçilen option->getFirstSelectedOption(). dediğimizde bize WebElement döndürür ,referans yazdırır
         //getText() yazdığımızda seçtiğimiz option'u yazdırırız
 
         //2-Dropdowndaki options'ların sayısının 28 olduğunu test edelim
-       // select.getOptions();list döndürür--> WebElementlerden oluşan bir liste yapalım
+        // select.getOptions();list döndürür--> WebElementlerden oluşan bir liste yapalım
 
-        List<WebElement> optionList=select.getOptions();
-        int actualoptionSayısı=optionList.size();
-        int expectedOptionSayısı=28;
+        List<WebElement> optionList = select.getOptions();
+        int actualoptionSayısı = optionList.size();
+        int expectedOptionSayısı = 28;
 
         Assert.assertEquals(expectedOptionSayısı, actualoptionSayısı);
+        /*
+                        DropDown menuye ulasmak icin select class'indan bir obje olustururuz
+                        ve locate ettigimiz dropdown webelement'inin select class'ina tanimlariz
+                        ve getOption methodunu kullanarak dropdown'u bir liste atarak dropdown menunun
+                        butun elemanlarının sayısına ulasabiliriz
+         */
 
     }
 
