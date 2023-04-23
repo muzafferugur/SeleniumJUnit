@@ -65,6 +65,15 @@ public class C06_DropDown {
         for(WebElement option:tumOptions){
             System.out.println(option.getText());
         }
+        /*
+        List<WebElement> list = select.getOptions();
+        for (WebElement each : list
+        ) {
+            System.out.println(each.getText());
+        }
+
+        list.stream().forEach(t-> System.out.println(t.getText())); // LAMBDA ile
+         */
 
         //vı.Dropdown'un boyutunu bulun, Dropdown'da 4 öğe varsa konsolda True, degilse False yazdırın.
         int dropDownBoyut=tumOptions.size();
