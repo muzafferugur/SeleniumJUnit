@@ -1,0 +1,20 @@
+ *****Handle Alerts*****
+
+ Herhangi bir web sitesine gidince veya bir web sitesinde herhangi bir
+         işlem yaptığımızda  ortaya çıkan uyarılara ALERT diyoruz.
+
+         Eğer bir Alert inspect yapılabiliyorsa o alert otomasyon ile kullanılabilir.
+         Bu tür alertlere html alert denir.bunlar için ekstra bir işlem yapmaya gerek yoktur.
+         Tüm web elementler gibi locate edip istediğimiz işlemleri yapabiliriz.
+
+Ancak web uygulamalarında Html alert yanında javascript alertler de var.
+         Js Alerts(Javascript alert)
+         Js Alerts inspect(inceleme) yapılamaz.Ekstra işleme ihtiyaç vardır.
+
+1-Simple Alert:Bu basit alert bazı bilgiler ve uyarılar alert eder.OK denilerek kapatırız.
+
+2-Confirmation Alert:Bu onay uyarısı bir tür işlem yapma izni ister.Alert onaylıyorsa
+Ok, onaylamıyorsa Cancel butonuna basılır.
+
+3-Prompt Alert:Bu Prompt Uyarısı kullanıcıdan bazı girdilerin girilmesini ister
+ve selenium webdriver metni sendkeys("input....") kullanarak girilebilir.

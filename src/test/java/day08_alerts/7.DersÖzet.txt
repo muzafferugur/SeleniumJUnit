@@ -1,0 +1,36 @@
+*****ASSERTİON*****
+
+1-)Assertion : Seleniumda teset edin denilen durumları Selenium Assertion Classından
+hazır methodlarla yaparız.
+
+2-)Javadan kalan if-else ile de teseet yapılabilir ama JUnit ve sonrasında kullanacağımız TestNG
+frameworkleri Assert e göre dizayn edilmiştir.
+
+3-)Assertion da öncelikle testimizde bizden istenenin ne olduğunu incelemeliyiz.
+-eğer bizden istenen 2 değerin eşitliğinin test edilmesi ise assertEquals
+-eğer sonucun olumlu olması(true) bekleniyorsa assertTrue
+-eğer sonucun olumsuz olmasını(false) bekliyorsak assertFalse
+
+4-)Assertion da testt FAILED olunca Selenium kodun kalan satırlarını çalıştırmaz.
+
+5-)İf-else kullandığımızda test istenen sonucu yazdırır, testin çalışması durmaz ve testin sonunda
+kodlar normal çalışıp bittiği için test PASSED der.
+
+
+*****DROPDOWN MENU*****(AÇILIR MENÜ)
+
+1-)Dropdown bir web element'den birden fazla option kullanabilmemizi sağlar.
+
+2-)Dropdown ile select tagı birbirinin ayrılmaz parçasıdır.
+
+3-)Bir HTML ögesi Select tagı kullanıyorsa çok büyük bir ihtimalle dropdowndır.
+
+4-)Dropdown da web elementi locate etmek değil drop downdan istediğimiz option'ı seçebilmektir.
+seçme işlemi 3 adımda yapılır:
+
+-Dropdown web elementini locate ederiz
+-Select Class'ından bir obje oluşturup parametre olarak dropdown web elementini yazarız
+-Dropdown'dan option seçmek için 3 seçenekten birini kullanırız:
+        --selectByIndex
+        --selectByVisibleText
+        --selectByValue
