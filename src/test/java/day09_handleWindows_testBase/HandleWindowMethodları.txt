@@ -1,0 +1,16 @@
+*****HANDLE WİNDOW METHODLARI*****
+
+1-)İçinde olduğumuz sayfanın handle değerini alma:
+driver.getWindowHandle();
+
+2-)Pencereler arasında geçiş yapma(Switch);
+driver.switchTo().window(sayfa1HandleDeğeri);
+
+3-)Yeni tab oluşturup geçiş yapma(switch):
+driver.switchTo().newWindow(WindowType.TAB);
+
+4-)Yeni window oluşturup geçiş yapma(switch):
+driver.switchTo().newWindow(WindowType.WINDOW);
+
+5-)Açık olan pencerelerin window handle değerlerini alma:
+driver.getWindowHandles();
