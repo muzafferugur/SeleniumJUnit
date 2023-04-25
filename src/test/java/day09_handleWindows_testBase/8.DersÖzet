@@ -1,0 +1,36 @@
+1-)JS Allert : Web sitelerinde iki tür alert vardır.
+
+ı.HTML Alerts= Sağ click yapıp incelenebilir, dolayısıyla diğer web elementler gibidir.
+
+ıı.JavaScript Alerts= Bunlar sağ click yapıp incelenemez, dolayısıyla da diğer webelementler den farklıdır.
+Bunlarla çalışabilmek için driver.switchTo().allert() methodu ile alerte geçip , ondan sonra accept, dissmiss,
+sendKeys veya getText methodlarından uygun olanı kullanılır.
+Art arda bile olsa alert ile iişlem yapmak istediğimiz her seferde switchTo kullanmalıyız.
+
+2-)Basic Authentication : Normal olarak web sitelerinde login fonksiyonu için kullanıcı adı ve şifre webelementlerine
+bilgileri girip login butonuna basarız.
+
+Ancak bazı web sitelerinde ve özellikle API haberleşmelerinde kullanıcı adı ve şifre manuel olarak tek tek girmek yerine
+servis sağlayıcının bize vereceği bilgiler doğrultusunda kullanıcı adı ve şifreyi url e ekleyebiliriz.
+
+Böylece sayfaya gitme ve login fonksiyonu tek adımda halledilmiş olur.
+
+3-)Iframe : bir web sayfası içinde kaynak olarak başka web sayfasının çalıştığı bölüm oluşturmak için HTML'de iframe oluşturulur.
+Her bir iframe kendi içinde bir web sayfası gibi html kodlardan oluşur.(htmlhead ve body tagları gibi)
+
+Eğer bir webelementi doğru locate etmemize rağmen, driver o webelementi bulamıyorsa, webelement
+iframe içerisinde olabilir. bu durumda html kodlarını incelememiz gerekir.
+
+3 şekilde iframe e geçiş yapabiliriz:
+*index  *name/id *WebElement olarak tanımlayarak.
+iframe alert'den farklıdır. switchTo() ile iframe e geçince oradan çıkıncaya kadar driver o iframe de kalır
+ve bu suretle asıl sayfadaki webelementleri görmez.
+
+ iframe den çıkmak için 2 komut vardır.
+        *driver.switchTo().parentFrame();-->Bir üst seviyedeki frame' e çıkartır.(anasayfaya çıkar)
+        *driver.switchTo().defaultContent();-->En üstteki frame'e çıkmak için kullanılır.(iç içe iframe olan sayfalarda kullanılabilir)
+
+
+
+
+
