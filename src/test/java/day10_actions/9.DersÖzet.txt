@@ -1,0 +1,22 @@
+1. Window handling: Bazen bir otomasyonda içinde olduğumuz sayfadan baska bir sekme veya baska bir
+window a yöndeleniribiliriz.
+
+2. Eğer kontrollü olarak yeni yeni sayfaya geçiyorsak
+driver.switchTo().newWindow(Window type) diyerek yeni bir sekme veya pencere açarsak driver otomatik olarak yeni
+sayfaya geçecektir.
+
+Eğer test case'imizde yeniden ilk sayfaya dönme görevi varsa ikinci sayfaya geçmeden önce ilk sayfanın window
+handle değerini alıp yeni bir String variableye assign ederiz.
+
+Böylece istediğimiz anda bu handle değerini kullanarak ilk sayfaya dönebiliriz.
+
+3-)Eğer yeni sayfa açılması tıkladığımız link ile oluyorsa driver yeni sayfaya GEÇMEZ. Bu durumda ilk sayfa ve ikinci sayfanın
+window handle değerlerini bulup bu handle değerleri ile sayfalar arası geçiş yapmamız gerekir.
+
+-ilk olarak ilk sayfda iken window handle değerini alıp String bir variableye assign ederiz.
+
+-linki tıkladıktan sonra ikinci sayfada açılacaktır. İikinci sayfa açıldıktan osnra driver.getWindowHandles() methodunu kullanarak
+her iki sayfanın window handle değerlerini alıp bir set e koyarız.
+
+- Set içindeki iki window handle değerinden biri ilk sayfanın ikincisi ikinci sayfanın (yani ilkine eşit olmayan) windowhandle değerdir.
+Bu şekilde iki sayfanın window handle değerini belirleyip istediğimiz gibi geçişi yapabiliriz.
