@@ -1,0 +1,24 @@
+*****Önceki Ders Tekrar*****
+
+1-)File: Selenium web driver üzerinden çalıştığı için bizim bilgisayarımızdaki dosylar
+üzerinden test yapamaz. Ancak bazı testlerimizi çalıştırırken bilgisayarımızda bir dosyanın
+var olup olmadığını kontrol etmemiz, bir dosyayı okumamız veya indirdiğimiz bir
+dosyanın indirilip indirilmediğini kontrol etmemiz gerekir.
+
+        Bu durumda Java imdadımıza yetişir.
+        Ancak Java bilgisayarımızdaki dosyalara erişebilmesi için dosya yoluna(path) ihtiyacı vardır.
+        Her bilgisayarın ismi ve user namei birbirinden farklı olacağından eğer sabit bir dosya yolu
+        yazarsak bir bilgisayarda çalışan test ötekinde çalışmaz. Bunun için dosya yolunun
+        dinamik olması tercih edilir.
+
+ Dosya yolunu dinamik yapmak için herkesin bilgisayarında farklı olan kısım
+ ve herkesin bilgisayarında aynı olan kısımları concate etmemiz gerekir.
+        Herkeste farklı olan=System.getProperty("user.home")
+        Herkeste aynı olan= \\Desktop\\dosyaAdı.dosyaUzantısı
+
+2-)Dosyamızın bilgisayarımızda olduğunu test etmek için:
+        Files.exists(Paths.get(dosyaYolu))->True yada False döner.
+
+3-)File Upload: Bilgisayarımızdaki klasörleri mouse ile açamayacağımız için dosya seç
+butonunu locate edip button.sendKeys(dosyaYolu) diyerek dosyayı seçip sonra file upload butonuna basıyoruz.
+

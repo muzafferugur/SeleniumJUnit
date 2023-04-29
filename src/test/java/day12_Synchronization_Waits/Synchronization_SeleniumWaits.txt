@@ -1,0 +1,19 @@
+*****Synchronization_SeleniumWaits*****
+1-)Synchronization,UI(Kullanıcı Ara yüzü) otomasyon testi için çok önemlidir.
+
+2-)Bir sayfanın uygulama sunucusu veya web sunucusu çok yavaşsa veya internet ağı çok yavaşsa,
+web sayfasındaki öğe(webelement) çok yavaş yüklenir.
+
+3-)Bu durumda, komut dosyanız (test script) öğeyi bulmaya çalıştığında, öğeler yüklenmez.
+
+4-)Bu yüzden test komut dosyası(test script) öğeyi bulamaz ve başarısız olur ve NoSuchElementException alırız
+
+Waits in Selenium:
+ı.Implicitly Wait->driver.manage().timeouts()=>Sayfadaki tüm öğeler için global bir zamanaşımıdır.
+ıı.Expilicitly Wait:=>Çoğunlukla belirli öğeler için belirli koşul(expected condition) için kullanılır.(şartlı bekleme)
+ 2 tane--->
+ WebDriverWait =>
+ --->FluentWait--bekliyor ama belli periyotlarla 3 sn de bir kontrol et gibi
+
+Java Tabanlı Wait
+Thread.sleep():Javadan gelir ve kodlaı yazılan süre kadar bekletir. Süre dolduktan sonra alt satırdan işleme devam eder.
