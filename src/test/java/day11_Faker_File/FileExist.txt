@@ -1,0 +1,12 @@
+******File Exist*****
+1-) Selenium ile windows uygulamalarını test edemiyoruz.Ama test etmek için JAVA kullanabiliriz
+
+2-)Bilgisayaraımızda bir dosya olup olmadığını(exist) kontrol etmek için Java kullanabiliriz.
+
+-System.getProperty("user.dir"); ==>içinde bulunulan klasörn yolunu(path) verir.
+
+-System.getProperty("user.home");==> bilgisayraınızda bulunan user klasörünü verir.
+
+-File.exists(Paths.get(file.Path)); ==>Bilgisayarınızda dosyanın olup olmadığını kontrol eder.
+
+3-)İndirilen bir dosyanın indirme klasöründe olup olmadığını konrol etme için bu Java konseptini kullanabiliriz.
