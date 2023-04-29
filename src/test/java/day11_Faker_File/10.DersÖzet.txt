@@ -1,0 +1,25 @@
+******ÖCEKİ DERS ÖZET*****
+1-)Test Base Class: Her test classında tekrar tekrar yazdığımız setup ve teardown methodları tekrar yazmaktan
+kurtulmak için Java OOP consepti kullanarak oluşturduğumuz bir classdır.
+
+-Test Base i parent olarak kabul den classlar hazırlık için oluşturduğumuz driver,setup() ve teardown() oluşturmak zorunda kalmazlar,
+kendilerinde olmasa bile parent classdan kullanılmış olur
+
+-Test Base genelde testlerden farklı bir package da olduğundan driver kullanabilmek için public veya protected
+yapmamız gerekir. Biz hep child classlardan kullanacağımız için protected yapmayı tercih ettik.
+
+-Bu class sadece child classlardan inharetance özellikleri ile kullanılsın istediğimizden bu classın obje oluşturarak kullanılmasına
+engel olmak için classı abstract YAPABİLİRİZ.
+
+******ACTİONS CLASS******
+
+1-)Actions Class: Sleneiumdaki actions classı mouse ve klavye ile yapabildiğimiz eylemleri driver ile yapabilmemize
+imkan tanır.
+ı-Mouse Base Actions:
+        click(),contextClick(),doubleClick(),clickAndHold(),dragAndDrop(),moveToElement()
+
+2-Keyboard Base Actions:
+        keyDown(),keyUp(),sendKeys()
+
+Actions classını kullanabilmek için actions objesi oluşturup , parametre oluşturup driverımızı eklemeyi ve enson perform()
+yapmayı unutmamalıyız.
