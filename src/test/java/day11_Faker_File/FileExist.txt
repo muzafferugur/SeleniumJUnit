@@ -10,3 +10,12 @@
 -File.exists(Paths.get(file.Path)); ==>Bilgisayarınızda dosyanın olup olmadığını kontrol eder.
 
 3-)İndirilen bir dosyanın indirme klasöründe olup olmadığını konrol etme için bu Java konseptini kullanabiliriz.
+
+
+***File Upload***
+2 yol ile yapılır:
+-Dosya yükleme işlemini anlamak için önce manuel olarak test yapılmalı
+
+-Daha sonra dosya dosyanın bulunduğu yer (path) kullanılarak yüklenebilir.
+
+https://the-internet.herokuapp.com/upload
