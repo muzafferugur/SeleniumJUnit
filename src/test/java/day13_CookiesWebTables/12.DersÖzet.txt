@@ -1,0 +1,13 @@
+*****Önceki Ders Özet*****
+
+1-)Selenium Waits,(senkronizasyon) : KOdlarımızla internet ve bilgisayarın çalışmasını uyumlu hale getirmek için bazen kodlarımızı bekletmemiz gerekebilir.
+2_-Seleniumda kullandığımız 3 çeşit wait vardır
+ı.Thread.sleep() : Javadan gelir thread.sleep() kendisine verilen sürenin son anına kadar bekler.Dinamik değil Statiktir.
+
+ıı.Implicitly wait : Seleniumdan gelir ve sayfanın yüklenmesi her bir web elementin locate edilmesi için beklenecek max süreyi belirler.Esnektir.
+Esas olan beklemek değil kodun çalışmasını sağlamaktır , kod çalışırsa beklemeden devam kod çalışmazsa max. süre doluncaya kadar bekler ve sonra hata mesajı veririr(Exception).
+
+ııı.Expilicitly wait : Seleniumdan gellir spesifik bir işlem için beklenecek max süreyi belirler.
+Expilicitly wait kullanabilmek için wait objesi oluşturmamız gerekir.
+wait.until(expectedConditions...istediğimiz fonk.) şeklinde kullanılır.
+Genellikle wait.until() methodu locate ile birlikte kullanılır.
