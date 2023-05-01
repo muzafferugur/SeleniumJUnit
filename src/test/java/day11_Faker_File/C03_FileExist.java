@@ -31,7 +31,7 @@ public class C03_FileExist {
         Testlerimizn tüm bilgisayarlarda çalışması için dosya yolunu dinamik yapmak zorundayız.
 
         Bunun için
-            herbilgisayarın birbirinden farklı olan yolunu bulmak için
+            her bilgisayarın birbirinden farklı olan yolunu bulmak adına
 
          */
         String farklıKısım = System.getProperty("user.home");

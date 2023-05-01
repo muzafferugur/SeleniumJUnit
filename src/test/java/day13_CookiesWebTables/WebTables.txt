@@ -1,0 +1,13 @@
+*****WEB TABLES*****
+1-)Bir web sayfasında webelementleri düzenlemek için HTML tablo oluşturabiliriz.
+
+2-)HTML tablo farklı şekillerde oluşturulabilir ama genellikle <table>,<theader>,<tbody>,<tr>,<th> ve <td>
+attributeleri kullanılır.
+
+**
+          Tabloda <table> tag'ı altında tablonun başlığını gösteren <thead> tagı bulunur.
+          Eğer başlık satır (row) varsa <thead> tag'ı altında <tr> (satır-row) tagı vardır.
+          Ve başlıktaki sütunlara yani hücrelere (cell) de <th> tag'ı ile ulaşılır.
+          Başlığın altındaki tablodaki verilere <tbody> tag'ı ile altındaki satirlara(row)
+          <tr> tag'ı ile sütunlara yani hücrelere <td> tag'ı ile ulaşırız.
+**
