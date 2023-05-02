@@ -37,5 +37,6 @@ public class C01_ReadExcel {
         String actualData=cell.toString();
 
         Assert.assertEquals(expectedData, actualData);
+        Assert.assertEquals(expectedData, cell.getStringCellValue());
     }
 }
