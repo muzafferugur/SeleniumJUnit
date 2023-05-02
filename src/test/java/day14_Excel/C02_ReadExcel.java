@@ -12,16 +12,16 @@ public class C02_ReadExcel {
     @Test
     public void readExcelTest() throws IOException {
 
-        // - Dosya yolunu bir String degiskene atayalim
+        // -önceki sorunun aynısı--> Dosya yolunu bir String degiskene atayalim
         String dosyaYolu = "src/resources/ulkeler.xlsx";
         FileInputStream fis=new FileInputStream(dosyaYolu);
         Workbook workbook= WorkbookFactory.create(fis);
 
         String actualData=workbook.
-                getSheet("Sayfa1").
-                getRow(3).
-                getCell(3).
-                toString();
+                getSheet("Sayfa1")
+                .getRow(3)
+                .getCell(3)
+                .toString();
 
     }
 }
