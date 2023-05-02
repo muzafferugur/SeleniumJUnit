@@ -1,6 +1,7 @@
 package day14_Excel;
 
 import org.apache.poi.ss.usermodel.*;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -30,5 +31,11 @@ public class C01_ReadExcel {
         // - Cell objesi olusturun row.getCell(index)
         Cell cell = row.getCell(3); // ==> Satır seçimi yapıldıktan sonra gücre seçimi bu şekilde yapılır.
         System.out.println(cell);
+
+        //3.index'deki satırın  3. indexindeki datanın Cezayir olduğunu test edin.
+        String expectedData="Cezayir";
+        String actualData=cell.toString();
+
+        Assert.assertEquals(expectedData, actualData);
     }
 }
