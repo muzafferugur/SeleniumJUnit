@@ -2,6 +2,7 @@ package day14_Excel;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -10,7 +11,7 @@ import java.io.IOException;
 
 public class C03_ReadExcel {
     @Test
-    public void readExcelTest() {
+    public void readExcelTest() throws IOException {
         /*
         input olarak verilen : satırNo,sutunNo değerlerini parametre olarak alıp o cell'deki datayı String olarak
         bana döndüren bir method oluşturalım
@@ -24,9 +25,10 @@ public class C03_ReadExcel {
 
         String actualData = banaDataGetir(satirNo - 1, sutunNo - 1);// satır no ve sutun no index değil , indexi almak için -1 dedik.
         //çünkü excel index ile çalışır
+        Assert.assertEquals(expectedData, actualData);
     }
 
-    private String banaDataGetir(int satirIndex, int sutunIndex) throws IOException {//=>Bizden String döndürmesini istediğimiz için String yaptık
+    public static String banaDataGetir(int satirIndex, int sutunIndex) throws IOException {//=>Bizden String döndürmesini istediğimiz için String yaptık
         String istenenData = "";
         String dosyaYolu = "src/resources/ulkeler.xlsx";
         FileInputStream fis = new FileInputStream(dosyaYolu);

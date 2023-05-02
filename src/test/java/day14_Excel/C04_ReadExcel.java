@@ -8,11 +8,10 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 
-public class C02_ReadExcel {
+public class C04_ReadExcel {
     @Test
     public void readExcelTest() throws IOException {
 
-        // <--önceki sorunun aynısı-->
         // - Dosya yolunu bir String degiskene atayalim
         String dosyaYolu = "src/resources/ulkeler.xlsx";
 
@@ -23,11 +22,17 @@ public class C02_ReadExcel {
         // - WorkbookFactory.create(fileInputStream)
         Workbook workbook = WorkbookFactory.create(fis);// ==> Workbook objesiyle fis objesi ile akışa aldğımız bir excell dosyası create ettik.
 
-        String actualData = workbook.
-                getSheet("Sayfa1")
-                .getRow(3)
-                .getCell(3)
-                .toString();
+        //İngilizce başkentler sütununu yazdıralım.
+        //son satır numarasını nasıl buluruz onunla başlayalım
+        int sonSatir = workbook.getSheet("Sayfa1").getLastRowNum();
+        System.out.println(sonSatir);//190->indexi veriyor.
+        String satirdakiData = "";
+
+        for (int i = 0; i <= sonSatir; i++) {
+
+            satirdakiData = C03_ReadExcel.banaDataGetir(i, 1);
+            System.out.println(satirdakiData);
+        }
 
     }
 }
