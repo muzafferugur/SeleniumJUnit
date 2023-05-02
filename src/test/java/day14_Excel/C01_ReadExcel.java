@@ -33,8 +33,8 @@ public class C01_ReadExcel {
         System.out.println(cell);
 
         //3.index'deki satırın  3. indexindeki datanın Cezayir olduğunu test edin.
-        String expectedData="Cezayir";
-        String actualData=cell.toString();
+        String expectedData = "Cezayir";
+        String actualData = cell.toString();
 
         Assert.assertEquals(expectedData, actualData);
         Assert.assertEquals(expectedData, cell.getStringCellValue());
