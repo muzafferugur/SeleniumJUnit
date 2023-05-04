@@ -41,7 +41,7 @@ public class C06_ReadExcel {
                 .getLastRowNum();
 
         for (int i = 0; i <=sonSatirIndex ; i++) {
-            //key i..,
+
 
         }
 
