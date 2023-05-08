@@ -8,6 +8,9 @@ import utilities.TestBase;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 public class C02_TumSayfaScreenShot extends TestBase {
     /*
@@ -47,7 +50,15 @@ public class C02_TumSayfaScreenShot extends TestBase {
 
         TakesScreenshot ts = (TakesScreenshot) driver;
 
-        File tumSayfaResim = new File("target/ekranGoruntuleri/tumSayfa.jpeg");
+        //dinamik yapmak için tarih oluşturuyoruz.Yani her seferinde yeni oluşturduğunuz
+        //raporu öncekinin üstüne kaydetmez.
+
+        LocalDateTime date = LocalDateTime.now();
+        DateTimeFormatter dtf=DateTimeFormatter.ofPattern("YYMMddHHmmss");
+        String tarih= dtf.format(date);
+        System.out.println(tarih);//230509011006
+
+        File tumSayfaResim = new File("target/ekranGoruntuleri/tumSayfa"+tarih+".jpeg");
 
         File geciciDosya = ts.getScreenshotAs(OutputType.FILE);
 
