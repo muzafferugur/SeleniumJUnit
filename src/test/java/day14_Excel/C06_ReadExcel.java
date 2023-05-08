@@ -24,7 +24,7 @@ public class C06_ReadExcel {
     public void readExcelTest() throws IOException {
 
 
-        Map<String, String> ulkelerMap=new HashMap<>();
+        Map<String, String> ulkelerMap = new HashMap<>();
 
         // - Dosya yolunu bir String degiskene atayalim
         String dosyaYolu = "src/resources/ulkeler.xlsx";
@@ -38,12 +38,24 @@ public class C06_ReadExcel {
 
         int sonSatirIndex = workbook
                 .getSheet("Sayfa1")
-                .getLastRowNum();
+                .getLastRowNum();//=>son satır indexini getirecek
 
-        for (int i = 0; i <=sonSatirIndex ; i++) {
+        for (int i = 0; i <= sonSatirIndex; i++) {
+            //key i'inci satırdaki 0 indexindeki datadır.
 
+            String key = workbook.getSheet("Sayfa1").getRow(i).getCell(0).toString();
+
+            //value ise i'inci satırdaki 1,2 ve 3. indexdeki dataların birleşimi olacak.
+            String value = workbook.getSheet("Sayfa1").getRow(i).getCell(1).toString()
+                    + ", "
+                    + workbook.getSheet("Sayfa1").getRow(i).getCell(2).toString()
+                    + ", "
+                    + workbook.getSheet("Sayfa1").getRow(i).getCell(3).toString();
+//key ve valueyi elde ettik artık map'e atabiliriz
+
+            ulkelerMap.put(key, value);
 
         }
-
+        System.out.println(ulkelerMap);
     }
 }
