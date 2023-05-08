@@ -2,6 +2,7 @@ package day14_Excel;
 
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
+import org.junit.Assert;
 import org.junit.Test;
 
 import java.io.FileInputStream;
@@ -36,9 +37,8 @@ public class C06_ReadExcel {
         // - WorkbookFactory.create(fileInputStream)
         Workbook workbook = WorkbookFactory.create(fis);// ==> Workbook objesiyle fis objesi ile akışa aldğımız bir excell dosyası create ettik.
 
-        int sonSatirIndex = workbook
-                .getSheet("Sayfa1")
-                .getLastRowNum();//=>son satır indexini getirecek
+        int sonSatirIndex = workbook.getSheet("Sayfa1").getLastRowNum();//=>son satır indexini getirecek
+        //.getLastRowNum()=> methodu bize excel sayfasındaki tum satır numarasını verir.
 
         for (int i = 0; i <= sonSatirIndex; i++) {
             //key i'inci satırdaki 0 indexindeki datadır.
@@ -51,11 +51,14 @@ public class C06_ReadExcel {
                     + workbook.getSheet("Sayfa1").getRow(i).getCell(2).toString()
                     + ", "
                     + workbook.getSheet("Sayfa1").getRow(i).getCell(3).toString();
-//key ve valueyi elde ettik artık map'e atabiliriz
+            //key ve valueyi elde ettik artık map'e atabiliriz
 
             ulkelerMap.put(key, value);
 
         }
         System.out.println(ulkelerMap);
+
+        //Listede Ghana olduğunu test edelim
+        Assert.assertTrue(ulkelerMap.keySet().contains("Ghana"));
     }
 }
