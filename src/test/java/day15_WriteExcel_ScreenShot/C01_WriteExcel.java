@@ -51,7 +51,7 @@ public class C01_WriteExcel {
         // 10) Dosyayi kapatalim
         fis.close();
         fos.close();
-        workbook.close();
+
 
 
     }
