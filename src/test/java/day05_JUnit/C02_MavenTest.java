@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
 
-public class C02_Soru1 {
+public class C02_MavenTest {
     public static void main(String[] args) throws InterruptedException {
         /*
         1. http://zero.webappsecurity.com/ sayfasına gidin
