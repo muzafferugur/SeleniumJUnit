@@ -14,5 +14,6 @@ public class C03_IstenenWebElementSS extends TestBase {
     public void webElementSS() {
 
        // amazona gidip nutella aratalım ve sonuç sayısının olduğu web elementin fotoğrafını çekelim
+
     }
 }
