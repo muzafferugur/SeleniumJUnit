@@ -21,5 +21,6 @@ public class C03_IstenenWebElementSS extends TestBase {
         WebElement sonucYaziElementi= driver.findElement(By.className("a-size-base s-desktop-toolbar a-text-normal"));
 
         File sonucYaziElementSS=new File("target/ekranGoruntuleri/sonucYazisiSS.jpeg");
+
     }
 }
